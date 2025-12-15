@@ -1,0 +1,3242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balendra Shah - Official Portfolio | Mayor of Kathmandu</title>
+    <meta name="description" content="Official portfolio of Balendra Shah - Mayor of Kathmandu, Rapper Turned Politician, Independent Leader">
+    <meta name="keywords" content="Balendra Shah, Balen Shah, Mayor of Kathmandu, Nepali rapper, Independent politician, Kathmandu Mayor">
+    <meta name="author" content="Balendra Shah Portfolio">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Add Nepali font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a237e;
+            --primary-dark: #0d1b5c;
+            --secondary: #d50000;
+            --accent: #00b0ff;
+            --dark: #121212;
+            --light: #f8f9fa;
+            --gray: #ffffff;
+            --light-gray: #e9ecef;
+            --success: #00c853;
+            --warning: #ff9800;
+            --danger: #ff5252;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, #283593 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, #ff5252 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, #2979ff 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background:url('https://images.pexels.com/photos/34532251/pexels-photo-34532251.jpeg')repeat top/cover;
+            overflow-x: hidden;
+            background-attachment:fixed;
+            background-size: cover;
+            background-position: bottom;
+
+        }
+        
+        body[lang="np"] {
+            font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+            text-align: justify;
+        }
+        
+        .container {
+            -moz-outline-radius: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Language Toggle */
+        .language-toggle {
+            position: fixed;
+            top: 88px;
+            right: 5px;
+            z-index: 2000;
+            background: white;
+            border-radius: 50px;
+            padding: 10px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 5px;
+        }
+        
+        .lang-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            background: transparent;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .lang-btn.active {
+            background: var(--gradient-primary);
+            color: white;
+        }
+        
+        /* Donation Box */
+        .donation-box {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            max-width: 350px;
+        }
+        
+        .donation-toggle {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-left: auto;
+            border: none;
+            padding: 15px 25px;
+        }
+        
+        .donation-toggle:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .donation-content {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 15px;
+            box-shadow: var(--shadow);
+            display: none;
+            animation: slideUp 0.3s ease;
+        }
+        
+        .donation-content.show {
+            display: block;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .donation-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .donation-options {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .donation-option {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        
+        .donation-option:hover {
+            border-color: var(--primary);
+            transform: translateX(5px);
+        }
+        
+        .donation-option.selected {
+            border-color: var(--success);
+            background: linear-gradient(135deg, rgba(0, 200, 83, 0.1), rgba(0, 200, 83, 0.05));
+        }
+        
+        .donation-amounts {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .amount-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid var(--light-gray);
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .amount-btn.selected {
+            background: var(--success);
+            color: white;
+            border-color: var(--success);
+        }
+        
+        .custom-amount {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--light-gray);
+            border-radius: 10px;
+            font-size: 1rem;
+            margin: 15px 0;
+        }
+        
+        .donate-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--gradient-accent);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+        
+        .donate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .donation-note {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        /* Header */
+        .portfolio-header {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+                url('https://scontent.fkep2-1.fna.fbcdn.net/v/t39.30808-6/382413594_878853793606877_8719128049082648316_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=RsFy52yAPdwQ7kNvwEk1wd4&_nc_oc=AdlbtSOugYnyINQNZ3YAe1s5q487yVbrYJHphwWKW7UFqsCHRD6LxXWK4naAuvhbwihzg43MVeSvSuJlfs8wIhei&_nc_zt=23&_nc_ht=scontent.fkep2-1.fna&_nc_gid=Tw99oTqyH-fugLaOHcsu2A&oh=00_AfnJqh1CUCSywolHlfvIkQxcblPfOD4Sr3YPiJL7Jmx7hA&oe=69435CC6') no-repeat center center/cover;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+        }
+        
+        .politician-main {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            width: 100%;
+        }
+        
+        .politician-image {
+            flex-shrink: 0;
+            position: relative;
+        }
+        
+        .main-photo {
+            width: 400px;
+            height: 500px;
+            border-radius: 30px;
+            object-fit: cover;
+            box-shadow: var(--shadow-lg);
+            border: 8px solid rgba(255, 255, 255, 0.2);
+            transform: perspective(1000px) rotateY(-10deg);
+            transition: var(--transition);
+        }
+        
+        .main-photo:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        .party-badge {
+            position: absolute;
+            bottom: 20px;
+            right: -20px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.95));
+            color: var(--primary);
+            padding: 8px 25px 8px 8px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow);
+            transform: rotate(-5deg);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 3px solid white;
+            z-index: 10;
+        }
+
+        .party-flag-container {
+            width: 50px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 8px;
+            padding: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .party-flag-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 5px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .politician-info {
+            flex: 1;
+        }
+        
+        .politician-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.9) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        body[lang="np"] .politician-name {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+        }
+        
+        .politician-title {
+            font-size: 1.8rem;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .header-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Navigation */
+        .portfolio-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+           background: 
+                url('https://images.pexels.com/photos/1172849/pexels-photo-1172849.jpeg') no-repeat center center/cover ;
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+           }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .nav-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .nav-menu {
+            
+            display: flex;
+            gap: 40px;
+        }
+        
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        /* Sections */
+        .section {
+            
+            padding: 50px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* About */
+        .about-content {
+            background:transparent;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: start;
+            border-radius: 0%;
+            padding: 1%;
+            
+        }
+        
+        .about-text {
+            color: var(--light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-text p {
+            margin-bottom: 25px;
+        }
+        
+        .quick-facts {
+            background: url('https://images.pexels.com/photos/1172849/pexels-photo-1172849.jpeg') no-repeat center center/cover;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .quick-facts h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: rgb(0, 0, 0);
+        }
+        
+        .fact-item {
+            
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .fact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .fact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(239, 238, 241);
+        }
+        
+        .fact-content h4 {
+            color:rgb(63, 46, 46);
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        
+        .fact-content p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        /* Gallery */
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 12px 30px;
+            background: white;
+            border: 2px solid var(--light-gray);
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--gradient-primary);
+            color: white;
+            border-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 30px;
+            color: white;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Timeline */
+        .timeline-container {
+            background:transparent;
+            position: relative;
+            max-width: 4000px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--gradient-primary);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            border: 4px solid var(--primary);
+        }
+        
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            background:url('https://images.pexels.com/photos/1037993/pexels-photo-1037993.jpeg')  no-repeat center center/cover ;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-year {
+            display: inline-block;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        /* Achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .achievement-card {
+            
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .achievement-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        /* Video Section */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .video-card {
+            background:transparent;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow:hsl(from color h s l)
+            transition: var(--transition);
+        }
+        
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .video-card:hover .video-thumbnail img {
+            transform: scale(1.1);
+        }
+        
+        .video-buttons {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .video-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        
+        .yt-btn {
+            background: #ff0000;
+            color: white;
+        }
+        
+        .yt-btn:hover {
+            background: #cc0000;
+            transform: translateY(-3px);
+        }
+        
+        .local-btn {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .local-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+        
+        .video-info {
+            padding: 25px;
+        }
+        
+        .video-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .video-info p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Video Modal */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .video-modal.show {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .video-modal-content {
+            width: 90%;
+            max-width: 900px;
+            background: transparent;
+            position: relative;
+        }
+        
+        .video-modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+            border: none;
+            transition: var(--transition);
+        }
+        
+        .video-modal-close:hover {
+            background: var(--danger);
+            color: white;
+        }
+        
+        #localVideoPlayer {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            border: none;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background:transparent;
+            padding: 10px 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 30px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 18px 25px;
+            border: 2px solid var(--light-gray);
+            border-radius: 15px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.1);
+        }
+        
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            padding: 18px 50px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: right;
+            gap: 10px;
+            justify-content: center;
+            margin: 0 150px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .info-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        /* Footer */
+        .portfolio-footer {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+                url('https://images.pexels.com/photos/236296/pexels-photo-236296.jpeg') no-repeat center center/cover;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 0px 10 0px;
+            
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, #b3e5fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 20px;
+           margin-top: 150px;
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal.show {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-content {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: var(--shadow);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .politician-main {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .main-photo {
+                width: 300px;
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .politician-name {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-container::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 60px;
+                text-align: left !important;
+            }
+            
+            .timeline-item::before {
+                left: 20px !important;
+                right: auto !important;
+            }
+            
+            .donation-box {
+                bottom: 20px;
+                right: 20px;
+                max-width: 300px;
+            }
+            
+            .language-toggle {
+                top: 15px;
+                right: 15px;
+            }
+            
+            .video-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .video-btn {
+                justify-content: center;
+            }
+            
+            #localVideoPlayer {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .politician-name {
+                font-size: 2.5rem;
+            }
+            
+            .header-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-menu {
+                gap: 20px;
+                font-size: 0.9rem;
+            }
+            
+            .donation-box {
+                max-width: 280px;
+            }
+            
+            .party-badge {
+                right: -10px;
+                bottom: 10px;
+                padding: 8px 15px;
+                font-size: 1rem;
+            }
+            
+            #localVideoPlayer {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .donation-box {
+                max-width: 250px;
+            }
+            
+            .donation-toggle {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Audio Player Section */
+        .audio-player-section {
+            background:transparent; 
+            color: white;
+            padding: 10px 0;
+            border-radius: 10px;
+            margin: 50px auto;
+            max-width: 1400px;
+            height:20%;
+        }
+
+        .audio-player-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Now Playing Section */
+        .now-playing {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .album-art {
+            width: 450px;
+            height: 100px;
+            border-radius: 15px;
+            margin: 0 auto 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .album-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .album-art:hover img {
+            transform: scale(1.05);
+        }
+
+        .track-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .track-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .track-artist {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        .track-album {
+            font-size: 1rem;
+            color: var(--gray);
+            opacity: 0.8;
+        }
+
+        /* Player Controls */
+        .player-controls {
+            margin: 30px 0;
+        }
+
+        .progress-container {
+            margin-bottom: 25px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .progress {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        .time-display {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+
+        .control-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .control-btn {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.1);
+            color: var(--accent);
+        }
+
+        .play-btn-large {
+            width: 70px;
+            height: 70px;
+            background: var(--accent);
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .play-btn-large:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 25px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .volume-slider {
+            flex: 1;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            cursor: pointer;
+            appearance: none;
+        }
+
+        .volume-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* Playlist Section */
+        .player-playlist {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .playlist-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .playlist-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .playlist-count {
+            color: var(--gray);
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .playlist-tracks {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .playlist-track {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .playlist-track:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+            border-color: rgba(0, 176, 255, 0.2);
+        }
+
+        .playlist-track.active {
+            background: rgba(0, 176, 255, 0.1);
+            border-color: var(--accent);
+        }
+
+        .track-number {
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .playlist-track.active .track-number {
+            background: var(--accent);
+            color: white;
+        }
+
+        .track-thumbnail {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .track-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .track-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .track-details h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: white;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .track-details p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            opacity: 0.8;
+        }
+
+        .track-duration {
+            color: var(--gray);
+            font-size: 0.9rem;
+            padding-left: 10px;
+        }
+
+        /* Responsive Design for Audio Player */
+        @media (max-width: 992px) {
+            .audio-player-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .album-art {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .player-playlist {
+                max-height: 500px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .audio-player-section {
+                padding: 60px 0;
+                margin: 30px auto;
+            }
+            
+            .track-title {
+                font-size: 1.6rem;
+            }
+            
+            .track-artist {
+                font-size: 1.1rem;
+            }
+            
+            .control-buttons {
+                gap: 20px;
+            }
+            
+            .play-btn-large {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .now-playing, .player-playlist {
+                padding: 25px;
+            }
+            
+            .album-art {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .control-buttons {
+                gap: 15px;
+            }
+            
+            .playlist-track {
+                padding: 12px;
+            }
+            
+            .track-thumbnail {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    /* Compact contact form tweaks */
+    .contact-container {
+        gap: 20px;
+    }
+    .contact-form {
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-label {
+        margin-bottom: 6px;
+        font-size: 0.95rem;
+    }
+    .form-input,
+    .form-textarea {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+    .form-textarea {
+        min-height: 90px;
+    }
+    .submit-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+    .contact-info .info-card {
+        padding: 20px;
+    }
+    @media (max-width: 768px) {
+        .contact-form { padding: 18px; }
+        .contact-container { gap: 18px; }
+        .form-textarea { min-height: 80px; }
+        .submit-btn { padding: 10px 18px; font-size: 0.95rem; }
+    }
+    @media (max-width: 480px) {
+        .contact-form { padding: 12px; border-radius: 10px; }
+        .form-input, .form-textarea { padding: 8px 10px; }
+        .form-textarea { min-height: 70px; }
+        .submit-btn { padding: 8px 14px; font-size: 0.9rem; }
+        .contact-container { gap: 12px; }
+    }
+    </style>
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle" id="languageToggle" style="background: url('https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg');background-size: cover; background-position: center;  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  border-radius: 30px;    padding: 8px;   position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; gap: 10px;">
+        <button class="lang-btn active" data-lang="en" style="color: #f8f9fa;">English</button>
+        <button class="lang-btn" data-lang="np" style="color: #f8f9fa;">नेपाली</button>
+    </div>
+
+    <!-- Donation Box -->
+    <div class="donation-box" id="donationBox">
+        <div class="donation-toggle" id="donationToggle">
+            <i class="fas fa-hands-helping"></i>
+            <span data-en="Support Kathmandu" data-np="काठमाडौंलाई समर्थन गर्नुहोस्">Support Kathmandu</span>
+        </div>
+        <div class="donation-content" id="donationContent">
+            <h3 class="donation-title">
+                <i class="fas fa-city"></i>
+                <span data-en="Rebuild Kathmandu" data-np="काठमाडौं पुनर्निर्माण">Rebuild Kathmandu</span>
+            </h3>
+            
+            <div class="donation-options">
+                <div class="donation-option" data-cause="waste" data-name-en="Waste Management" data-name-np="फोहोर व्यवस्थापन">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #00c853, #64dd17); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white;">
+                            <i class="fas fa-trash-alt"></i>
+                        </div>
+                        <div>
+                            <h4 data-en="Smart Waste Management" data-np="स्मार्ट फोहोर व्यवस्थापन">Smart Waste Management</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray);" data-en="Modern solutions for cleaner Kathmandu" data-np="स्वच्छ काठमाडौंको लागि आधुनिक समाधान">Modern solutions for cleaner Kathmandu</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="donation-option" data-cause="youth" data-name-en="Youth Programs" data-name-np="युवा कार्यक्रम">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #2979ff, #00b0ff); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h4 data-en="Youth Empowerment" data-np="युवा सशक्तिकरण">Youth Empowerment</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray);" data-en="Skills and opportunities for young people" data-np="युवाहरूको लागि सिप र अवसर">Skills and opportunities for young people</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="donation-option" data-cause="heritage" data-name-en="Heritage Conservation" data-name-np="सम्पदा संरक्षण">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #ff6f00, #ffab00); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white;">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <div>
+                            <h4 data-en="Heritage Preservation" data-np="सांस्कृतिक सम्पदा संरक्षण">Heritage Preservation</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray);" data-en="Protecting Kathmandu's cultural heritage" data-np="काठमाडौंको सांस्कृतिक सम्पदा संरक्षण">Protecting Kathmandu's cultural heritage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <label style="font-weight: 600; display: block; margin-bottom: 10px;" data-en="Select Amount (NPR)" data-np="रकम चयन गर्नुहोस् (रुपैयाँ)">Select Amount (NPR)</label>
+                <div class="donation-amounts">
+                    <button class="amount-btn" data-amount="500">रु 500</button>
+                    <button class="amount-btn" data-amount="1000">रु 1,000</button>
+                    <button class="amount-btn" data-amount="2000">रु 2,000</button>
+                    <button class="amount-btn" data-amount="5000">रु 5,000</button>
+                </div>
+                
+                <input type="number" class="custom-amount" id="customAmount" placeholder data-en="Custom Amount (NPR)" data-np="अनुकूल रकम (रुपैयाँ)" min="100">
+                
+                <button class="donate-btn" id="donateBtn">
+                    <i class="fas fa-donate"></i>
+                    <span data-en="Donate Now" data-np="अहिले दान गर्नुहोस्">Donate Now</span>
+                </button>
+                
+                <p class="donation-note">
+                    <i class="fas fa-shield-alt"></i>
+                    <span data-en="100% Transparent | Direct to Projects" data-np="१००% पारदर्शी | परियोजनामा सिधै">100% Transparent | Direct to Projects</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="portfolio-header">
+        <div class="header-content">
+            <div class="container">
+                <div class="politician-main" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="politician-image">
+                        <img src="https://aawaajnews.com/wp-content/uploads/2023/07/Balen-Shah-photo-1080x640.jpg" 
+                             alt="Balendra Shah" class="main-photo">
+                        
+                        <div class="party-badge">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/330px-Flag_of_Nepal.svg.png"
+                                alt="Independent" style="height: 25px;width: 25px;">
+                            <span data-en="Independent" data-np="स्वतन्त्र">Independent</span>
+                        </div>
+                    </div>
+                    
+                    <div class="politician-info">
+                        <h1 class="politician-name" data-en="Balendra Shah" data-np="बलेन्द्र शाह">Balendra Shah</h1>
+                        <p class="politician-title" data-en="Mayor of Kathmandu · Rapper Turned Reformer" 
+                           data-np="काठमाडौं महानगरपालिकाका महापौर · र्यापरबाट सुधारक">
+                           Mayor of Kathmandu · Rapper Turned Reformer
+                        </p>
+                        
+                        <div class="header-stats">
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                                <span class="stat-number">87%</span>
+                                <span class="stat-label" data-en="Election Victory" data-np="निर्वाचन जित">Election Victory</span>
+                            </div>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                                <span class="stat-number">250+</span>
+                                <span class="stat-label" data-en="Projects Launched" data-np="सुरु गरिएका परियोजना">Projects Launched</span>
+                            </div>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="600">
+                                <span class="stat-number">92%</span>
+                                <span class="stat-label" data-en="Public Approval" data-np="जनस्वीकृति">Public Approval</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="portfolio-nav">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/330px-Flag_of_Nepal.svg.png"
+                                    alt="Independent" style="height: 25px;width: 25px;">                                   
+                <span data-en="Balen Shah" data-np="बलेन शाह" style="color: var(--primary);">Balen Shah</span>
+            </a>
+            <div class="nav-menu" style="color: #000;">
+                <a href="#about" class="nav-link active" data-en="About" data-np="बारेमा">About</a>
+                <a href="#gallery" class="nav-link" data-en="Gallery" data-np="ग्यालरी">Gallery</a>
+                <a href="#timeline" class="nav-link" data-en="Journey" data-np="यात्रा">Journey</a>
+                <a href="#music" class="nav-link" data-en="Music" data-np="संगीत">Music</a>
+                <a href="#achievements" class="nav-link" data-en="Reforms" data-np="सुधार">Reforms</a>
+                <a href="#videos" class="nav-link" data-en="Videos" data-np="भिडियो">Videos</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-np="सम्पर्क">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="About Balen" data-np="बलेनको बारेमा">About Balen</h2>
+                <p class="section-subtitle" data-en="From rapping to reforming - A new kind of leadership for Nepal" 
+                   data-np="र्यापबाट सुधारसम्म - नेपालको लागि नयाँ प्रकारको नेतृत्व">
+                   From rapping to reforming - A new kind of leadership for Nepal
+                </p>
+            </div>
+            
+            <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+                <div class="about-text">
+                    <p data-en="Balendra 'Balen' Shah is a Nepalese rapper, structural engineer, and politician serving as the Mayor of Kathmandu since 2022. Born in 1990 in Kathmandu, Shah represents a new generation of leaders who have entered politics from non-political backgrounds, bringing fresh perspectives and innovative approaches to governance."
+                       data-np="बलेन्द्र 'बलेन' शाह एक नेपाली र्यापर, संरचनात्मक इन्जिनियर र राजनीतिज्ञ हुन् जो २०२२ देखि काठमाडौं महानगरपालिकाका महापौरको रूपमा सेवा गर्दै आएका छन्। १९९० मा काठमाडौंमा जन्मिएका शाह गैर-राजनीतिक पृष्ठभूमिबाट राजनीतिमा प्रवेश गरेका नयाँ पुस्ताका नेता हुन् जसले शासनप्रति नयाँ दृष्टिकोण र नवीन दृष्टिकोण ल्याएका छन्।">
+                       Balendra 'Balen' Shah is a Nepalese rapper, structural engineer, and politician serving as the Mayor of Kathmandu since 2022. Born in 1990 in Kathmandu, Shah represents a new generation of leaders who have entered politics from non-political backgrounds, bringing fresh perspectives and innovative approaches to governance.
+                    </p>
+                    
+                    <p data-en="Shah rose to fame as a rapper with his hit song 'Nepali Rapper' and used his platform to address social issues and political corruption. In 2022, he ran as an independent candidate for Mayor of Kathmandu and won by a landslide margin of 87%, defeating established political parties."
+                       data-np="शाह आफ्नो हिट गीत 'नेपाली र्यापर' सँग र्यापरको रूपमा प्रसिद्ध भए र उनले आफ्नो मञ्चलाई सामाजिक मुद्दाहरू र राजनीतिक भ्रष्टाचार सम्बोधन गर्न प्रयोग गरे। २०२२ मा, उनी काठमाडौं महानगरपालिकाका महापौरको लागि स्वतन्त्र उम्मेदवारको रूपमा उठे र ८७% को भारी अन्तरले जित हासिल गरे, स्थापित राजनीतिक दलहरूलाई पराजित गरे।">
+                       Shah rose to fame as a rapper with his hit song 'Nepali Rapper' and used his platform to address social issues and political corruption. In 2022, he ran as an independent candidate for Mayor of Kathmandu and won by a landslide margin of 87%, defeating established political parties.
+                    </p>
+                    
+                    <p data-en="As Mayor, Shah has focused on waste management, urban development, transparency, and citizen participation. His administration is known for its tech-savvy approach, social media engagement, and direct communication with citizens, breaking traditional bureaucratic barriers."
+                       data-np="महापौरको रूपमा, शाहले फोहोर व्यवस्थापन, शहरी विकास, पारदर्शिता र नागरिक सहभागितामा ध्यान केन्द्रित गरेका छन्। उनको प्रशासन प्रविधिमा ज्ञान राख्ने दृष्टिकोण, सामाजिक सञ्जाल सहभागिता र नागरिकहरूसँग सिधा सम्पर्कको लागि परिचित छ, परम्परागत नौकरशाही बाधाहरू तोड्दै।">
+                       As Mayor, Shah has focused on waste management, urban development, transparency, and citizen participation. His administration is known for its tech-savvy approach, social media engagement, and direct communication with citizens, breaking traditional bureaucratic barriers.
+                    </p>
+                </div>
+                
+                <div class="quick-facts" data-aos="fade-left">
+                    <h3 data-en="Quick Facts" data-np="मुख्य तथ्यहरू">Quick Facts</h3>
+                    
+                    <div class="fact-item">
+                        <div class="fact-icon">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                        <div class="fact-content">
+                            <h4 data-en="Date of Birth" data-np="जन्म मिति">Date of Birth</h4>
+                            <p data-en="1990, Kathmandu" data-np="१९९०, काठमाडौं">1990, Kathmandu</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fact-item">
+                        <div class="fact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="fact-content">
+                            <h4 data-en="Education" data-np="शिक्षा">Education</h4>
+                            <p data-en="Structural Engineer" data-np="संरचनात्मक इन्जिनियर">Structural Engineer</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fact-item">
+                        <div class="fact-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="fact-content">
+                            <h4 data-en="Profession" data-np="पेशा">Profession</h4>
+                            <p data-en="Rapper & Politician" data-np="र्यापर र राजनीतिज्ञ">Rapper & Politician</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fact-item">
+                        <div class="fact-icon">
+                            <i class="fas fa-vote-yea"></i>
+                        </div>
+                        <div class="fact-content">
+                            <h4 data-en="Election Victory" data-np="निर्वाचन जित">Election Victory</h4>
+                            <p data-en="87% (2022)" data-np="८७% (२०२२)">87% (2022)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="Gallery" data-np="ग्यालरी">Gallery</h2>
+                <p class="section-subtitle" data-en="Visual journey of transformation and leadership" 
+                   data-np="परिवर्तन र नेतृत्वको दृश्यात्मक यात्रा">
+                   Visual journey of transformation and leadership
+                </p>
+            </div>
+            
+            <div class="gallery-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all" data-en="All" data-np="सबै">All</button>
+                <button class="filter-btn" data-filter="campaign" data-en="Campaign" data-np="अभियान">Campaign</button>
+                <button class="filter-btn" data-filter="work" data-en="Work" data-np="काम">Work</button>
+                <button class="filter-btn" data-filter="public" data-en="Public Events" data-np="सार्वजनिक कार्यक्रम">Public Events</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="campaign" data-aos="zoom-in">
+                    <img src="https://i0.wp.com/www.nepallivetoday.com/wp-content/uploads/2022/05/balen2.jpg?resize=435%2C653&ssl=1" 
+                         alt="Election Victory" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3 data-en="Historic Victory" data-np="ऐतिहासिक जित">Historic Victory</h3>
+                        <p data-en="Celebrating the landslide election win" 
+                           data-np="भारी निर्वाचन जितको जश्न">
+                           Celebrating the landslide election win
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="work" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/06/balen-shaha-sunita-dangol.jpg" 
+                         alt="Waste Management" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3 data-en="Waste Management" data-np="फोहोर व्यवस्थापन">Waste Management</h3>
+                        <p data-en="Inspecting waste management initiatives" data-np="फोहोर व्यवस्थापन पहलहरूको निरीक्षण">Inspecting waste management initiatives</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="public" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://english.onlinekhabar.com/wp-content/uploads/2022/07/kathmandu-mayor-balen-shah-nea-kukl.jpg" 
+                         alt="Public Meeting" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3 data-en="Town Hall Meeting" data-np="टाउन हल बैठक">Town Hall Meeting</h3>
+                        <p data-en="Direct interaction with citizens" 
+                           data-np="नागरिकहरूसँग सिधा अन्तरक्रिया">
+                           Direct interaction with citizens
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="campaign" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://media.assettype.com/gulfnews/2025-09-10/99ftyiq0/ereee.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true" 
+                         alt="Youth Rally" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3 data-en="Youth Rally" data-np="युवा रैली">Youth Rally</h3>
+                        <p data-en="Mobilizing youth for change" 
+                           data-np="परिवर्तनको लागि युवा सक्रियता">
+                           Mobilizing youth for change
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="work" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://www.nepalminute.com/uploads/posts/Balen%20Shah%201%20(1)1661410836.JPG" 
+                         alt="Infrastructure" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3 data-en="Infrastructure Inspection" data-np="पूर्वाधार निरीक्षण">Infrastructure Inspection</h3>
+                        <p data-en="Reviewing urban development projects" 
+                           data-np="शहरी विकास परियोजनाहरूको समीक्षा">
+                           Reviewing urban development projects
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="public" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="https://superdesk-pro-c.s3.amazonaws.com/sd-nepalitimes/20221114111132/6372197f9c7e80680e0baaa0jpeg.jpg" 
+                         alt="Media Interaction" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h3 data-en="Media Interaction" data-np="मिडिया अन्तरक्रिया">Media Interaction</h3>
+                        <p data-en="Addressing press on current issues" 
+                           data-np="वर्तमान मुद्दाहरूमा प्रेसलाई सम्बोधन">
+                           Addressing press on current issues
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="The Journey" data-np="यात्रा">The Journey</h2>
+                <p class="section-subtitle" data-en="From engineering to rapping to political leadership" 
+                   data-np="इन्जिनियरिङबाट र्यापिङ र राजनीतिक नेतृत्वसम्म">
+                   From engineering to rapping to political leadership
+                </p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2010s</span>
+                        <h3 data-en="Engineering Career" data-np="इन्जिनियरिङ करियर">Engineering Career</h3>
+                        <p data-en="Worked as a structural engineer after completing education. Developed professional expertise in construction and urban planning that would later inform his political work."
+                           data-np="शिक्षा पूरा गरेपछि संरचनात्मक इन्जिनियरको रूपमा काम गरे। निर्माण र शहरी योजनामा व्यावसायिक विशेषज्ञता विकास गरे जसले पछि उनको राजनीतिक कामलाई सूचना दिनेछ।">
+                           Worked as a structural engineer after completing education. Developed professional expertise in construction and urban planning that would later inform his political work.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2018</span>
+                        <h3 data-en="Musical Breakthrough" data-np="सांगीतिक सफलता">Musical Breakthrough</h3>
+                        <p data-en="Released 'Nepali Rapper' which became an anthem for youth. Used music to critique social issues and political corruption, gaining widespread popularity and becoming a voice for change."
+                           data-np="'नेपाली र्यापर' जारी गरे जुन युवाको लागि गीत बन्यो। सामाजिक मुद्दाहरू र राजनीतिक भ्रष्टाचारको आलोचना गर्न संगीत प्रयोग गरे, व्यापक लोकप्रियता प्राप्त गरे र परिवर्तनको लागि आवाज बने।">
+                           Released 'Nepali Rapper' which became an anthem for youth. Used music to critique social issues and political corruption, gaining widespread popularity and becoming a voice for change.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2022</span>
+                        <h3 data-en="Historic Election" data-np="ऐतिहासिक निर्वाचन">Historic Election</h3>
+                        <p data-en="Ran as independent candidate for Mayor of Kathmandu. Won by unprecedented 87% margin, defeating established political parties. Campaign focused on transparency, waste management, and youth empowerment."
+                           data-np="काठमाडौं महानगरपालिकाका महापौरको लागि स्वतन्त्र उम्मेदवारको रूपमा उठे। अभूतपूर्व ८७% अन्तरले जित हासिल गरे, स्थापित राजनीतिक दलहरूलाई पराजित गरे। अभियान पारदर्शिता, फोहोर व्यवस्थापन र युवा सशक्तिकरणमा केन्द्रित थियो।">
+                           Ran as independent candidate for Mayor of Kathmandu. Won by unprecedented 87% margin, defeating established political parties. Campaign focused on transparency, waste management, and youth empowerment.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2022-Present</span>
+                        <h3 data-en="Transformative Leadership" data-np="परिवर्तनकारी नेतृत्व">Transformative Leadership</h3>
+                        <p data-en="Implemented innovative waste management systems, improved urban infrastructure, and established direct citizen engagement through social media. Became symbol of new political possibilities in Nepal."
+                           data-np="नवीन फोहोर व्यवस्थापन प्रणालीहरू कार्यान्वयन गरे, शहरी पूर्वाधार सुधार गरे, र सामाजिक सञ्जाल मार्फत नागरिक सहभागिता स्थापना गरे। नेपालमा नयाँ राजनीतिक सम्भावनाको प्रतीक बने।">
+                           Implemented innovative waste management systems, improved urban infrastructure, and established direct citizen engagement through social media. Became symbol of new political possibilities in Nepal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Music Section -->
+<section id="music" class="section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title" data-en="Musical Journey" data-np="सांगीतिक यात्रा">Musical Journey</h2>
+            <p class="section-subtitle" data-en="From music to politics - The voice of a generation" 
+               data-np="संगीतबाट राजनीतिसम्म - एउटा पुस्ताको आवाज">
+               From music to politics - The voice of a generation
+            </p>
+        </div>
+        
+        <div class="audio-player-section" data-aos="fade-up">
+            <div class="audio-player-container">
+                <!-- Now Playing Section -->
+                <div class="now-playing">
+                    <div class="album-art">
+                        <img src="balidan.png" alt="Album Art" id="albumArt">
+                    </div>
+                    
+                    <div class="track-info">
+                        <h3 class="track-title" id="currentTitle">Nepali Rapper</h3>
+                        <p class="track-artist" id="currentArtist">Balendra Shah</p>
+                        <p class="track-album" id="currentAlbum">The Movement (2021)</p>
+                    </div>
+                    
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progressBar">
+                                <div class="progress" id="progress"></div>
+                            </div>
+                            <div class="time-display">
+                                <span id="currentTime">0:00</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="control-buttons">
+                            <button class="control-btn" id="prevBtn" title="Previous">
+                                <i class="fas fa-step-backward"></i>
+                            </button>
+                            
+                            <button class="control-btn play-btn-large" id="playBtn" title="Play/Pause">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            
+                            <button class="control-btn" id="nextBtn" title="Next">
+                                <i class="fas fa-step-forward"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="volume-control">
+                            <i class="fas fa-volume-up"></i>
+                            <input type="range" min="0" max="100" value="80" class="volume-slider" id="volumeSlider">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Playlist Section -->
+                <div class="player-playlist">
+                    <div class="playlist-header">
+                        <h3 class="playlist-title">Popular Tracks</h3>
+                        <span class="playlist-count" id="trackCount">6 tracks</span>
+                    </div>
+                    
+                    <div class="playlist-tracks" id="playlist">
+                        <!-- Tracks will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://www.youtube.com/@BalenShah" target="_blank" class="submit-btn" style="display: inline-flex; background: var(--gradient-secondary);">
+                    <i class="fab fa-youtube"></i>
+                    <span data-en="More on YouTube" data-np="युट्युबमा थप">More on YouTube</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hidden Audio Element -->
+<audio id="audioPlayer" preload="none"></audio>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="Key Reforms" data-np="मुख्य सुधारहरू">Key Reforms</h2>
+                <p class="section-subtitle" data-en="Transforming Kathmandu through innovation and transparency" 
+                   data-np="नवीनता र पारदर्शिता मार्फत काठमाडौंलाई रूपान्तरण">
+                   Transforming Kathmandu through innovation and transparency
+                </p>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card" data-aos="flip-left" style="background: url('https://images.pexels.com/photos/6995417/pexels-photo-6995417.jpeg'); background-size: cover; background-position:0%; no-repeat;">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trash-restore"></i>
+                    </div>
+                    <h3 data-en="Waste Management Revolution" data-np="फोहोर व्यवस्थापन क्रान्ति">Waste Management Revolution</h3>
+                    <p data-en="Implemented smart waste collection systems, increased recycling, and cleaned historic areas. Reduced waste backlog by 70% in first year."
+                       data-np="स्मार्ट फोहोर संकलन प्रणालीहरू कार्यान्वयन गरे, पुनर्चक्रण बढाए, र ऐतिहासिक क्षेत्रहरू सफा गरे। पहिलो वर्षमा फोहोर ब्याकलग ७०% ले कम गरे।" style="color: #070707; font-style:oblique; font: bold;font-size: large;">
+                       Implemented smart waste collection systems, increased recycling, and cleaned historic areas. Reduced waste backlog by 70% in first year.
+                    </p>
+                </div>
+                
+                <div class="achievement-card" data-aos="flip-left" data-aos-delay="100" style="background: url('https://images.pexels.com/photos/13033932/pexels-photo-13033932.jpeg'); background-size: cover; background-position:50%; no-repeat;">
+                    <div class="achievement-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3 data-en="Urban Infrastructure" data-np="शहरी पूर्वाधार">Urban Infrastructure</h3>
+                    <p data-en="Improved roads, drainage systems, and public spaces. Launched 'Smart Kathmandu' initiative focusing on sustainable urban development."
+                       data-np="सडक, जल निकासी प्रणाली, र सार्वजनिक स्थानहरू सुधार गरे। धारणीय शहरी विकासमा केन्द्रित 'स्मार्ट काठमाडौं' पहिल सुरु गरे।" style="color: #f8f9fa; font-style:oblique; font: bold;font-size: large;">
+                       Improved roads, drainage systems, and public spaces. Launched 'Smart Kathmandu' initiative focusing on sustainable urban development.
+                    </p>
+                </div>
+                
+                <div class="achievement-card" data-aos="flip-left" data-aos-delay="200" style="background: url('https://images.pexels.com/photos/10334821/pexels-photo-10334821.jpeg'); background-size: cover; background-position:50%; no-repeat;">
+                    <div class="achievement-icon">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <h3 data-en="Transparency & Accountability" data-np="पारदर्शिता र जवाफदेही">Transparency & Accountability</h3>
+                    <p data-en="Established real-time project tracking, open budget portals, and weekly public meetings. Set new standards for municipal governance in Nepal."
+                       data-np="यथार्थ समय परियोजना ट्र्याकिङ, खुल्ला बजेट पोर्टलहरू, र साप्ताहिक सार्वजनिक बैठकहरू स्थापना गरे। नेपालमा नगरपालिका शासनको लागि नयाँ मानक स्थापना गरे।" style="color: #f8f9fa; font-style:oblique; font: bold;font-size: large;">
+                       Established real-time project tracking, open budget portals, and weekly public meetings. Set new standards for municipal governance in Nepal.
+                    </p>
+                </div>
+                
+                <div class="achievement-card" data-aos="flip-left" data-aos-delay="300"  style="background: url('https://nepaleconomicforum.org/wp-content/uploads/2022/12/people-g6d31f19e9_1920.jpg'); background-size: cover; background-position:50%; no-repeat;">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-en="Youth Engagement" data-np="युवा सहभागिता">Youth Engagement</h3>
+                    <p data-en="Created youth advisory councils, internship programs, and innovation labs. Empowered young people in decision-making processes."
+                       data-np="युवा सल्लाहकार परिषद्, इन्टर्नसिप कार्यक्रमहरू, र नवीनता प्रयोगशालाहरू सिर्जना गरे। निर्णय प्रक्रियामा युवाहरूलाई सशक्तिकरण गरे।" style="color: #f8f9fa; font-style:oblique; font: bold;font-size: large;">
+                       Created youth advisory councils, internship programs, and innovation labs. Empowered young people in decision-making processes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="videos" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="Video Gallery" data-np="भिडियो ग्यालरी">Video Gallery</h2>
+                <p class="section-subtitle" data-en="Speeches, interviews, and musical performances" 
+                   data-np="भाषणहरू, अन्तर्वार्ताहरू, र सांगीतिक प्रदर्शनहरू">
+                   Speeches, interviews, and musical performances
+                </p>
+            </div>
+            
+            <div class="video-grid">
+                <!-- YouTube Video 1 -->
+                <div class="video-card" data-aos="fade-up">
+                    <div class="video-thumbnail">
+                        <img src="thumb.png" alt="Balen Shah Speech">
+                        <div class="video-buttons">
+                            <a href="https://youtu.be/u9_ft0CCHgQ?si=PDtR0NpNGdV9L6rE" target="_blank" class="video-btn yt-btn">
+                                <i class="fab fa-youtube"></i>
+                                <span data-en="Watch on YouTube" data-np="युट्युबमा हेर्नुहोस्">Watch on YouTube</span>
+                            </a>
+                            <button class="video-btn local-btn" data-video="Balen Shah elected as a Mayor of Kathmandu Metropolitan city__.mp4">
+                                <i class="fas fa-play"></i>
+                                <span data-en="Play Here" data-np="यहाँ चलाउनुहोस्">Play Here</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3 data-en="Inaugural Speech" data-np="शपथ ग्रहण सम्बोधन">Inaugural Speech</h3>
+                        <p data-en="First speech as Mayor of Kathmandu"
+                           data-np="काठमाडौं महानगरपालिकाका महापौरको रूपमा पहिलो भाषण">
+                           First speech as Mayor of Kathmandu
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- YouTube Video 2 -->
+                <div class="video-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="video-thumbnail">
+                        <img src="https://i.ytimg.com/vi/YxI-8DVWIQQ/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGEcgUyhlMA8=&rs=AOn4CLB8zXMv6mBTXzucyXe85hZmUroGNg" alt="Balen Interview">
+                        <div class="video-buttons">
+                            <a href="https://youtu.be/YxI-8DVWIQQ?si=2OdnYF9Zwdf83k-U" target="_blank" class="video-btn yt-btn">
+                                <i class="fab fa-youtube"></i>
+                                <span data-en="Watch on YouTube" data-np="युट्युबमा हेर्नुहोस्">Watch on YouTube</span>
+                            </a>
+                            <button class="video-btn local-btn" data-video="balen_interview.mp4">
+                                <i class="fas fa-play"></i>
+                                <span data-en="Play Here" data-np="यहाँ चलाउनुहोस्">Play Here</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3 data-en="Exclusive Interview" data-np="विशेष अन्तर्वार्ता">Exclusive Interview</h3>
+                        <p data-en="Discussing urban challenges and solutions"
+                           data-np="शहरी चुनौतीहरू र समाधानहरूको छलफल">
+                           Discussing urban challenges and solutions
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- YouTube Video 3 -->
+                <div class="video-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="video-thumbnail">
+                        <img src="balidan.png" alt="Balen Rap">
+                        <div class="video-buttons">
+                            <a href="https://youtu.be/VZfKqojCmeg?si=qC0iuikFDNK4Pbjw" target="_blank" class="video-btn yt-btn">
+                                <i class="fab fa-youtube"></i>
+                                <span data-en="Watch on YouTube" data-np="युट्युबमा हेर्नुहोस्">Watch on YouTube</span>
+                            </a>
+                            <button class="video-btn local-btn" data-video="BALEN - NEPALI RAPPER (OFFICIAL MUSIC VIDEO).mp4">
+                                <i class="fas fa-play"></i>
+                                <span data-en="Play Here" data-np="यहाँ चलाउनुहोस्">Play Here</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3 data-en="Balidan" data-np="">Balidan</h3>
+                        <p data-en="Iconic song that started the movement"
+                           data-np="आन्दोलन सुरु गर्ने प्रतिष्ठित गीत">
+                           Iconic song that started the movement
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- YouTube Video 4 -->
+                <div class="video-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="video-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcge6y46jhy_jJloydB3O68d2_fnOdzr28Ow&s" alt="Balen Town Hall">
+                        <div class="video-buttons">
+                            <a href="https://youtu.be/4NN2xwqzxX8?si=BSsDfEsZF1N6CH-O" target="_blank" class="video-btn yt-btn">
+                                <i class="fab fa-youtube"></i>
+                                <span data-en="Watch on YouTube" data-np="युट्युबमा हेर्नुहोस्">Watch on YouTube</span>
+                            </a>
+                            <button class="video-btn local-btn" data-video="balen_townhall.mp4">
+                                <i class="fas fa-play"></i>
+                                <span data-en="Play Here" data-np="यहाँ चलाउनुहोस्">Play Here</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3 data-en="Town Hall Meeting" data-np="टाउन हल बैठक">Town Hall Meeting</h3>
+                        <p data-en="Direct interaction with citizens"
+                           data-np="नागरिकहरूसँग सिधा अन्तरक्रिया">
+                           Direct interaction with citizens
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Direct YouTube Links Section -->
+            <div style="margin-top: 50px;" data-aos="fade-up">
+                <h3 style="text-align: center; margin-bottom: 30px;" data-en="More Video Links" data-np="थप भिडियो लिङ्कहरू">More Video Links</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    <a href="https://www.youtube.com/results?search_query=balen+shah+speech" target="_blank" style="background:transparent; padding: 20px; border-radius: 15px; text-decoration: none; color: var(--dark); box-shadow: var(--shadow); display: flex; align-items: center; gap: 15px; transition: var(--transition);">
+                        <div style="width: 60px; height: 60px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <div>
+                            <h4 data-en="Political Speeches" data-np="राजनीतिक भाषण">Political Speeches</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray);" data-en="Collection of important addresses" data-np="महत्वपूर्ण सम्बोधनहरूको संग्रह">Collection of important addresses</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.youtube.com/results?search_query=balen+shah+rap" target="_blank" style="background: transparent; padding: 20px; border-radius: 15px; text-decoration: none; color: var(--dark); box-shadow: var(--shadow); display: flex; align-items: center; gap: 15px; transition: var(--transition);">
+                        <div style="width: 60px; height: 60px; background: var(--gradient-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div>
+                            <h4 data-en="Musical Performances" data-np="सांगीतिक प्रदर्शन">Musical Performances</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray);" data-en="Rap songs and performances" data-np="र्याप गीतहरू र प्रदर्शनहरू">Rap songs and performances</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.youtube.com/results?search_query=balen+shah+interview" target="_blank" style="background: transparent; padding: 20px; border-radius: 15px; text-decoration: none; color: var(--dark); box-shadow: var(--shadow); display: flex; align-items: center; gap: 15px; transition: var(--transition);">
+                        <div style="width: 60px; height: 60px; background: var(--gradient-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div>
+                            <h4 data-en="Interviews & Dialogues" data-np="अन्तर्वार्ता र वार्तालाप">Interviews & Dialogues</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray);" data-en="Media interactions and discussions" data-np="मिडिया अन्तरक्रिया र छलफल">Media interactions and discussions</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="Contact" data-np="सम्पर्क">Contact</h2>
+                <p class="section-subtitle" data-en="Connect for suggestions, meetings, or collaborations" 
+                   data-np="सुझाव, बैठकहरू, वा सहकार्यको लागि जोडिनुहोस्">
+                   Connect for suggestions, meetings, or collaborations
+                </p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-form" data-aos="fade-right" style="background: url('https://images.pexels.com/photos/8015516/pexels-photo-8015516.jpeg');no-repeat; background-size: cover; ">
+                    <h3 style="font-size: 2rem; margin-bottom: 10px;" data-en="Send a Message" data-np="सन्देश पठाउनुहोस्">Send a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label" data-en="Your Name" data-np="तपाईंको नाम">Your Name</label>
+                            <input type="text" class="form-input" placeholder data-en="Enter your full name" data-np="तपाईंको पुरा नाम लेख्नुहोस्" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" data-en="Email Address" data-np="ईमेल ठेगाना">Email Address</label>
+                            <input type="email" class="form-input" placeholder data-en="Enter your email" data-np="तपाईंको ईमेल लेख्नुहोस्" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" data-en="Subject" data-np="विषय">Subject</label>
+                            <input type="text" class="form-input" placeholder data-en="Enter subject" data-np="विषय लेख्नुहोस्" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" data-en="Message" data-np="सन्देश">Message</label>
+                            <textarea class="form-textarea" placeholder data-en="Type your message here..." data-np="आफ्नो सन्देश यहाँ लेख्नुहोस्..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-en="Send Message" data-np="सन्देश पठाउनुहोस्">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-info" >
+                    <div class="info-card" data-aos="fade-left"  style="background: url('https://images.pexels.com/photos/403575/pexels-photo-403575.jpeg');no-repeat; background-size: cover; background-position:0ch; ">
+                        <div class="info-icon">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJoWMeyxNj3nUJ6rNADEYaoVSfRV9Bu8wQkA&s" alt="secretary" style="width: 50px; height: 50px; border-radius: 50%;">
+                        </div>
+                        <h3 data-en="Office Secretary" data-np="कार्यालय सचिव">Office Secretary</h3>
+                        <p data-en="Bhupu Dev Shah" data-np="भुपु देव शाह">Bhupu Dev Shah</p>
+                        <p><strong data-en="Email:" data-np="ईमेल:">Email:</strong> secretary@kathmandu.gov.np</p>
+                        <p><strong data-en="Phone:" data-np="फोन:">Phone:</strong> +977-1-422-1111</p>
+                    </div>
+                    
+                   <div class="info-card" data-aos="fade-left" data-aos-delay="100" style="background: linear-gradient(135deg, #1a237e, #283593); color: white; align-items: center;">
+                        <div class="info-icon" style="background: white; color: #1a237e;">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3 data-en="Support Our Mission" data-np="हाम्रो मिशनलाई समर्थन गर्नुहोस्">Support Our Mission</h3>
+                        <p data-en="Your contribution helps transform Kathmandu into a modern, sustainable city with better infrastructure and services for all citizens." 
+                           data-np="तपाईंको योगदानले काठमाडौंलाई आधुनिक, धारणीय शहरमा रूपान्तरण गर्न मद्दत गर्दछ, सबै नागरिकहरूको लागि राम्रो पूर्वाधार र सेवाहरूको साथ।">
+                           Your contribution helps transform Kathmandu into a modern, sustainable city.
+                        </p>
+                        <button id="donationContactBtn" class="submit-btn" style="width: 50%; text-align: center; margin-right:50px; background: white; color: #1a237e; border: 2px solid white;">
+                            <i class="fas fa-donate"></i>
+                            <span data-en="Support Now" data-np="अहिले समर्थन गर्नुहोस्">Support Now</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="portfolio-footer" style="font-size:medium; ">
+        <div class="container" style="size: 0cap;">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">
+                       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/330px-Flag_of_Nepal.svg.png"
+                                    alt="Independent" style="height: 25px;width: 25px;"> 
+                        <span data-en="Balen Shah" data-np="बलेन शाह">Balen Shah</span>
+                    </div>
+                    <p data-en="Official portfolio of Balendra Shah, Mayor of Kathmandu Metropolitan City. Independent leader dedicated to transforming urban governance through innovation, transparency, and citizen participation."
+                       data-np="बलेन्द्र शाह, काठमाडौं महानगरपालिकाका महापौरको आधिकारिक पोर्टफोलियो। नवीनता, पारदर्शिता र नागरिक सहभागिता मार्फत शहरी शासन रूपान्तरण गर्न समर्पित स्वतन्त्र नेता।">
+                       Official portfolio of Balendra Shah, Mayor of Kathmandu Metropolitan City. Independent leader dedicated to transforming urban governance through innovation, transparency, and citizen participation.
+                    </p>
+                    
+                </div>
+                
+                <div  style="text-align: center;">
+                    <h3 data-en="Quick Links" data-np="द्रुत लिङ्कहरू">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#about" class="footer-link" data-en="About" data-np="बारेमा">About</a></li>
+                        <li><a href="#music" class="footer-link" data-en="Music" data-np="संगीत">Music</a></li>
+                        <li><a href="#timeline" class="footer-link" data-en="Journey" data-np="यात्रा">Journey</a></li>
+                        <li><a href="#achievements" class="footer-link" data-en="Reforms" data-np="सुधार">Reforms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                        <a href="https://www.facebook.com/balendra.shah.1232/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/shah_balen" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/balendrashah/" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/results?search_query=balen+shah" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>  
+                
+                <div>
+                    <h3 data-en="Office Information" data-np="कार्यालय जानकारी">Office Information</h3>
+                    <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> <span data-en="Kathmandu Metropolitan City Office" data-np="काठमाडौं महानगरपालिका कार्यालय">Kathmandu Metropolitan City Office</span></p>
+                    <p><i class="fas fa-phone" style="margin-right: 10px;"></i> +977-1-422-1111</p>
+                    <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> mayor@kathmandu.gov.np</p>
+                    <p><i class="fas fa-globe" style="margin-right: 10px;"></i> www.kathmandu.gov.np</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <p data-en="&copy; 2024 Balendra Shah Portfolio. All rights reserved." 
+                   data-np="&copy; २०२४ बलेन्द्र शाह पोर्टफोलियो। सर्वाधिकार सुरक्षित।">
+                   &copy; 2024 Balendra Shah Portfolio. All rights reserved.
+                </p>
+                <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;" data-en="An independent initiative for transparent governance" data-np="पारदर्शी शासनको लागि स्वतन्त्र पहल">An independent initiative for transparent governance</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal for Local Videos -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <button class="video-modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <video id="localVideoPlayer" controls>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <div class="modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <img id="modalImage" src="" alt="" style="width: 100%; height: auto;">
+        </div>
+    </div>
+
+    <!-- Donation Success Modal -->
+    <div class="modal" id="donationSuccessModal">
+        <div class="modal-content" style="max-width: 500px; text-align: center; padding: 50px;">
+            <div class="modal-close" id="donationClose">
+                <i class="fas fa-times"></i>
+            </div>
+            <div style="width: 80px; height: 80px; background: var(--gradient-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; color: white; font-size: 2.5rem;">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3 id="donationSuccessTitle" data-en="Thank You for Your Support!" data-np="तपाईंको समर्थनको लागि धन्यवाद!">Thank You for Your Support!</h3>
+            <p id="donationSuccessMessage" style="margin: 20px 0 30px; color: var(--gray);" 
+               data-en="Your contribution will directly fund Kathmandu's transformation. You will receive a digital receipt and project updates."
+               data-np="तपाईंको योगदान सिधै काठमाडौंको रूपान्तरणको लागि कोष गरिनेछ। तपाईंलाई डिजिटल रसिद र परियोजना अपडेटहरू प्राप्त हुनेछ।">
+               Your contribution will directly fund Kathmandu's transformation. You will receive a digital receipt and project updates.
+            </p>
+            <button id="donationDoneBtn" style="padding: 15px 40px; background: var(--gradient-primary); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer;">
+                <span data-en="Done" data-np="समाप्त">Done</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Store scroll position before refresh
+        let scrollPosition = sessionStorage.getItem('scrollPosition') || 0;
+        
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Language Management
+        let currentLang = localStorage.getItem('portfolioLang') || 'en';
+        
+        // Store scroll position before unload
+        window.addEventListener('beforeunload', function() {
+            sessionStorage.setItem('scrollPosition', window.scrollY || document.documentElement.scrollTop);
+        });
+        
+        // Restore scroll position on load
+        window.addEventListener('load', function() {
+            // Restore scroll position
+            if (sessionStorage.getItem('scrollPosition')) {
+                setTimeout(() => {
+                    window.scrollTo(0, parseInt(sessionStorage.getItem('scrollPosition')));
+                }, 100);
+            }
+            
+            // Prevent autofocus on audio player
+            document.getElementById('audioPlayer').blur();
+            
+            // Prevent hash scrolling
+            if (window.location.hash) {
+                history.replaceState(null, null, ' ');
+            }
+        });
+        
+        // Update page with current language
+        function updateLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('portfolioLang', lang);
+            
+            // Update html lang attribute
+            document.documentElement.setAttribute('lang', lang);
+            document.body.setAttribute('lang', lang);
+            
+            // Update all elements with data-en and data-np
+            document.querySelectorAll('[data-en]').forEach(element => {
+                if (lang === 'en') {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = element.getAttribute('data-en');
+                    } else {
+                        element.textContent = element.getAttribute('data-en');
+                    }
+                } else {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = element.getAttribute('data-np');
+                    } else {
+                        element.textContent = element.getAttribute('data-np');
+                    }
+                }
+            });
+            
+            // Update language toggle buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Update audio player language if it exists
+            if (window.musicData) {
+                updateAudioPlayerLanguage();
+            }
+        }
+        
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateLanguage(currentLang);
+        });
+        
+        // Language toggle button functionality
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                updateLanguage(lang);
+            });
+        });
+        
+        // Donation Box Functionality
+        const donationToggle = document.getElementById('donationToggle');
+        const donationContent = document.getElementById('donationContent');
+        const donationOptions = document.querySelectorAll('.donation-option');
+        const amountButtons = document.querySelectorAll('.amount-btn');
+        const customAmountInput = document.getElementById('customAmount');
+        const donateBtn = document.getElementById('donateBtn');
+        const donationSuccessModal = document.getElementById('donationSuccessModal');
+        const donationClose = document.getElementById('donationClose');
+        const donationDoneBtn = document.getElementById('donationDoneBtn');
+        
+        let selectedCause = 'waste';
+        let selectedAmount = 1000;
+        
+        // Toggle donation box - Support Kathmandu button
+        if (donationToggle && donationContent) {
+            donationToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                donationContent.classList.toggle('show');
+            });
+        }
+        
+        // Support Now button - same toggle function
+        const donationContactBtn = document.getElementById('donationContactBtn');
+        if (donationContactBtn && donationContent) {
+            donationContactBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                donationContent.classList.toggle('show');
+            });
+        }
+        
+        // Select donation cause
+        donationOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                donationOptions.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedCause = this.getAttribute('data-cause');
+            });
+        });
+        
+        // Select amount
+        amountButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                amountButtons.forEach(btn => btn.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedAmount = parseInt(this.getAttribute('data-amount'));
+                customAmountInput.value = '';
+            });
+        });
+        
+        // Custom amount input
+        customAmountInput.addEventListener('input', function() {
+            if (this.value) {
+                amountButtons.forEach(btn => btn.classList.remove('selected'));
+                selectedAmount = parseInt(this.value) || 0;
+            }
+        });
+        
+        // Donate button click
+        donateBtn.addEventListener('click', function() {
+            if (selectedAmount < 100) {
+                alert(currentLang === 'en' 
+                    ? 'Minimum donation amount is NPR 100' 
+                    : 'न्यूनतम दान रकम रु १०० हो');
+                return;
+            }
+            
+            // Show processing state
+            const originalText = donateBtn.innerHTML;
+            donateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + 
+                (currentLang === 'en' ? 'Processing...' : 'प्रशोधन गर्दै...');
+            donateBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Reset button
+                donateBtn.innerHTML = originalText;
+                donateBtn.disabled = false;
+                
+                // Close donation box
+                donationContent.classList.remove('show');
+                
+                // Show success modal
+                donationSuccessModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                
+                // Log donation (in real app, send to backend)
+                console.log('Donation made:', {
+                    cause: selectedCause,
+                    amount: selectedAmount,
+                    currency: 'NPR',
+                    timestamp: new Date().toISOString()
+                });
+            }, 1500);
+        });
+        
+        // Close donation success modal
+        donationClose.addEventListener('click', function() {
+            donationSuccessModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+        
+        donationDoneBtn.addEventListener('click', function() {
+            donationSuccessModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+        
+        donationSuccessModal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Close donation box when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!donationBox.contains(e.target) && !donationToggle.contains(e.target)) {
+                donationContent.classList.remove('show');
+            }
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-link, .footer-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all nav links
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked nav link (if it's a nav-link)
+                if (this.classList.contains('nav-link')) {
+                    this.classList.add('active');
+                }
+                
+                // Scroll to section
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Update active nav link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Gallery filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 100);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Gallery modal functionality
+        const galleryModal = document.getElementById('galleryModal');
+        const modalImage = document.getElementById('modalImage');
+        const galleryClose = galleryModal.querySelector('.modal-close');
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const imgSrc = this.querySelector('.gallery-img').src;
+                modalImage.src = imgSrc;
+                galleryModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        galleryClose.addEventListener('click', function() {
+            galleryModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+        
+        galleryModal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Local Video Modal Functionality
+        const videoModal = document.getElementById('videoModal');
+        const videoPlayer = document.getElementById('localVideoPlayer');
+        const videoModalClose = videoModal.querySelector('.video-modal-close');
+        const localVideoButtons = document.querySelectorAll('.local-btn');
+        
+        localVideoButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const videoSrc = this.getAttribute('data-video');
+                videoPlayer.src = videoSrc;
+                videoModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                videoPlayer.play();
+            });
+        });
+        
+        videoModalClose.addEventListener('click', function() {
+            videoPlayer.pause();
+            videoModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+        
+        videoModal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                videoPlayer.pause();
+                this.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            const originalText = submitBtn.querySelector('span').textContent;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + 
+                (currentLang === 'en' ? 'Sending...' : 'पठाइदै...');
+            
+            // Simulate API call (replace with actual backend)
+            setTimeout(() => {
+                // Show success message
+                alert(currentLang === 'en' 
+                    ? 'Thank you for your message! We will get back to you soon.' 
+                    : 'तपाईंको सन्देशको लागि धन्यवाद! हामी चाँडै नै तपाईंसँग सम्पर्क गर्नेछौं।');
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> ' + originalText;
+            }, 2000);
+        });
+        
+        // Animated counter for stats
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 30);
+        }
+        
+        // Start counters when stats come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    statNumbers.forEach(stat => {
+                        const target = parseInt(stat.textContent.replace('%', ''));
+                        animateCounter(stat, target);
+                    });
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(document.querySelector('.header-stats'));
+        
+        // Initialize first donation option as selected
+        document.querySelector('.donation-option').classList.add('selected');
+        document.querySelector('.amount-btn[data-amount="1000"]').classList.add('selected');
+        
+        // Audio Player Functionality
+        const musicData = [
+            {
+                id: 1,
+                title: "Balidan",
+                title_np: "बलिदान",
+                artist: "Balendra Shah ft. Youth Artists",
+                artist_np: "बलेन्द्र शाह ft. युवा कलाकार",
+                album: "Unity Collection (2022)",
+                album_np: "एकता संग्रह (२०२२)",
+                src: "BALEN - BALIDAN (OFFICIAL MUSIC VIDEO).mp3",
+                duration: "3:50",
+                thumbnail: "balidan.png"
+            },
+            {
+                id: 2,
+                title: "Savage",
+                title_np: "सैभेज",
+                artist: "Balendra Shah",
+                artist_np: "बलेन्द्र शाह",
+                album: "Political Anthems (2022)",
+                album_np: "राजनीतिक गीतहरू (२०२२)",
+                src: "BALEN - BALIDAN (OFFICIAL MUSIC VIDEO).mp3", // Using same file as placeholder
+                duration: "4:20",
+                thumbnail: "savage.png"
+            },
+            {
+                id: 3,
+                title: "Aastik",
+                title_np: "आस्तिक",
+                artist: "Balendra Shah",
+                artist_np: "बलेन्द्र शाह",
+                album: "Social Commentary (2020)",
+                album_np: "सामाजिक टिप्पणी (२०२०)",
+                src: "BALEN - BALIDAN (OFFICIAL MUSIC VIDEO).mp3", // Using same file as placeholder
+                duration: "3:15",
+                thumbnail: "aastik.png"
+            },
+            {
+                id: 4,
+                title: "Naya Nepal",
+                title_np: "नयाँ नेपाल",
+                artist: "Balendra Shah",
+                artist_np: "बलेन्द्र शाह",
+                album: "Vision of Change (2023)",
+                album_np: "परिवर्तनको दृष्टि (२०२३)",
+                src: "BALEN - BALIDAN (OFFICIAL MUSIC VIDEO).mp3", // Using same file as placeholder
+                duration: "4:05",
+                thumbnail: "balen1.png"
+            },
+            {
+                id: 5,
+                title: "Nepali Rapper",
+                title_np: "नेपाली र्यापर",
+                artist: "Balendra Shah",
+                artist_np: "बलेन्द्र शाह",
+                album: "The Movement (2021)",
+                album_np: "द मूभमेन्ट (२०२१)",
+                src: "BALEN - BALIDAN (OFFICIAL MUSIC VIDEO).mp3", // Using same file as placeholder
+                duration: "3:45",
+                thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0RGzxNQly8c9CMm_ZGIhYhWoITeZm-4W3eNU595M0rNis91KjlBJasuVPeUNQUNnMUJ1aMfCANLTcgGy_4b8pH-BNYUMxHmA-8r5i202WNQ&s=10"
+            },
+            {
+                id: 6,
+                title: "Sankalpa",
+                title_np: "संकल्प",
+                artist: "Balendra Shah",
+                artist_np: "बलेन्द्र शाह",
+                album: "Promise to People (2023)",
+                album_np: "जनतासँग वाचा (२०२३)",
+                src: "BALEN - BALIDAN (OFFICIAL MUSIC VIDEO).mp3", // Using same file as placeholder
+                duration: "3:30",
+                thumbnail: "balen1.png"
+            }
+        ];
+
+        // DOM Elements for Audio Player
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playBtn = document.getElementById('playBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const progressBar = document.getElementById('progressBar');
+        const progress = document.getElementById('progress');
+        const currentTimeEl = document.getElementById('currentTime');
+        const durationEl = document.getElementById('duration');
+        const volumeSlider = document.getElementById('volumeSlider');
+        const playlistEl = document.getElementById('playlist');
+        const currentTitle = document.getElementById('currentTitle');
+        const currentArtist = document.getElementById('currentArtist');
+        const currentAlbum = document.getElementById('currentAlbum');
+        const albumArt = document.getElementById('albumArt');
+        const trackCount = document.getElementById('trackCount');
+
+        // Player State
+        let currentTrackIndex = 0;
+        let isPlaying = false;
+
+        // Format time (seconds to MM:SS)
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        // Update track info with current language
+        function updateTrackInfo(index) {
+            const track = musicData[index];
+            const lang = currentLang;
+            
+            currentTitle.textContent = lang === 'np' ? track.title_np : track.title;
+            currentArtist.textContent = lang === 'np' ? track.artist_np : track.artist;
+            currentAlbum.textContent = lang === 'np' ? track.album_np : track.album;
+            albumArt.src = track.thumbnail;
+            
+            // Update active track in playlist
+            updateActiveTrack(index);
+            
+            // Reset progress
+            progress.style.width = '0%';
+            currentTimeEl.textContent = '0:00';
+            
+            // Set duration when metadata is loaded
+            audioPlayer.addEventListener('loadedmetadata', () => {
+                durationEl.textContent = formatTime(audioPlayer.duration);
+            }, { once: true });
+        }
+
+        // Update active track in playlist
+        function updateActiveTrack(index) {
+            // Remove active class from all tracks
+            document.querySelectorAll('.playlist-track').forEach(track => {
+                track.classList.remove('active');
+            });
+            
+            // Add active class to current track
+            const trackElement = document.querySelector(`.playlist-track[data-index="${index}"]`);
+            if (trackElement) {
+                trackElement.classList.add('active');
+            }
+        }
+
+        // Play track
+        function playTrack() {
+            isPlaying = true;
+            audioPlayer.play();
+            playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            playBtn.title = currentLang === 'en' ? 'Pause' : 'रोक्नुहोस्';
+        }
+
+        // Pause track
+        function pauseTrack() {
+            isPlaying = false;
+            audioPlayer.pause();
+            playBtn.innerHTML = '<i class="fas fa-play"></i>';
+            playBtn.title = currentLang === 'en' ? 'Play' : 'चलाउनुहोस्';
+        }
+
+        // Play/Pause toggle
+        function togglePlayPause() {
+            if (isPlaying) {
+                pauseTrack();
+            } else {
+                playTrack();
+            }
+        }
+
+        // Next track
+        function nextTrack() {
+            currentTrackIndex = (currentTrackIndex + 1) % musicData.length;
+            loadTrack(currentTrackIndex);
+            if (isPlaying) {
+                playTrack();
+            }
+        }
+
+        // Previous track
+        function prevTrack() {
+            currentTrackIndex = (currentTrackIndex - 1 + musicData.length) % musicData.length;
+            loadTrack(currentTrackIndex);
+            if (isPlaying) {
+                playTrack();
+            }
+        }
+
+        // Load track
+        function loadTrack(index) {
+            const track = musicData[index];
+            audioPlayer.src = track.src;
+            updateTrackInfo(index);
+            
+            // If already playing, continue playing
+            if (isPlaying) {
+                playTrack();
+            }
+        }
+
+        // Update progress bar
+        function updateProgress() {
+            const { currentTime, duration } = audioPlayer;
+            if (duration) {
+                const progressPercent = (currentTime / duration) * 100;
+                progress.style.width = `${progressPercent}%`;
+                currentTimeEl.textContent = formatTime(currentTime);
+            }
+        }
+
+        // Set progress on click
+        function setProgress(e) {
+            const width = this.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audioPlayer.duration;
+            
+            if (duration) {
+                audioPlayer.currentTime = (clickX / width) * duration;
+            }
+        }
+
+        // Set volume
+        function setVolume() {
+            audioPlayer.volume = this.value / 100;
+        }
+
+        // Create playlist
+        function createPlaylist() {
+            trackCount.textContent = `${musicData.length} tracks`;
+            
+            musicData.forEach((track, index) => {
+                const trackElement = document.createElement('div');
+                trackElement.className = `playlist-track ${index === currentTrackIndex ? 'active' : ''}`;
+                trackElement.dataset.index = index;
+                
+                trackElement.innerHTML = `
+                    <div class="track-number">${index + 1}</div>
+                    <div class="track-thumbnail">
+                        <img src="${track.thumbnail}" alt="${track.title}" loading="lazy">
+                    </div>
+                    <div class="track-details">
+                        <h4>${currentLang === 'np' ? track.title_np : track.title}</h4>
+                        <p>${currentLang === 'np' ? track.artist_np : track.artist} • ${currentLang === 'np' ? track.album_np : track.album}</p>
+                    </div>
+                    <div class="track-duration">${track.duration}</div>
+                `;
+                
+                // Add click event to play track
+                trackElement.addEventListener('click', () => {
+                    currentTrackIndex = index;
+                    loadTrack(currentTrackIndex);
+                    playTrack();
+                });
+                
+                playlistEl.appendChild(trackElement);
+            });
+        }
+
+        // Initialize audio player
+        function initAudioPlayer() {
+            // Create playlist
+            createPlaylist();
+            
+            // Load first track
+            loadTrack(currentTrackIndex);
+            
+            // Event Listeners
+            playBtn.addEventListener('click', togglePlayPause);
+            prevBtn.addEventListener('click', prevTrack);
+            nextBtn.addEventListener('click', nextTrack);
+            
+            audioPlayer.addEventListener('timeupdate', updateProgress);
+            audioPlayer.addEventListener('ended', nextTrack);
+            
+            progressBar.addEventListener('click', setProgress);
+            volumeSlider.addEventListener('input', setVolume);
+            
+            // Keyboard controls
+            document.addEventListener('keydown', (e) => {
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+                
+                switch(e.code) {
+                    case 'Space':
+                        e.preventDefault();
+                        togglePlayPause();
+                        break;
+                    case 'ArrowRight':
+                        e.preventDefault();
+                        nextTrack();
+                        break;
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        prevTrack();
+                        break;
+                }
+            });
+            
+            // Initialize volume
+            audioPlayer.volume = volumeSlider.value / 100;
+            
+            // Update button titles based on language
+            updateAudioPlayerLanguage();
+        }
+
+        // Update audio player language
+        function updateAudioPlayerLanguage() {
+            playBtn.title = currentLang === 'en' ? 'Play/Pause' : 'चलाउनुहोस्/रोक्नुहोस्';
+            prevBtn.title = currentLang === 'en' ? 'Previous' : 'अघिल्लो';
+            nextBtn.title = currentLang === 'en' ? 'Next' : 'अर्को';
+            
+            // Update track info
+            if (musicData[currentTrackIndex]) {
+                updateTrackInfo(currentTrackIndex);
+            }
+            
+            // Update playlist items
+            document.querySelectorAll('.playlist-track').forEach((trackEl, index) => {
+                if (musicData[index]) {
+                    const track = musicData[index];
+                    const details = trackEl.querySelector('.track-details');
+                    details.innerHTML = `
+                        <h4>${currentLang === 'np' ? track.title_np : track.title}</h4>
+                        <p>${currentLang === 'np' ? track.artist_np : track.artist} • ${currentLang === 'np' ? track.album_np : track.album}</p>
+                    `;
+                }
+            });
+        }
+
+        // Initialize audio player when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            if (document.getElementById('audioPlayer')) {
+                initAudioPlayer();
+            }
+        });
+
+        // Update audio player language when language changes
+        const originalUpdateLanguage = updateLanguage;
+        updateLanguage = function(lang) {
+            originalUpdateLanguage(lang);
+            if (document.getElementById('audioPlayer')) {
+                updateAudioPlayerLanguage();
+            }
+        };
+    </script>
+</body>
+</html>
